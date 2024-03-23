@@ -1,5 +1,7 @@
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador =3
+let vidasEnemigo = 3
 
 
 function iniciarJuego() {
@@ -15,8 +17,8 @@ function iniciarJuego() {
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
 
-
-
+    let botonReiniciar = document.getElementById("boton-reiniciar")
+    botonReiniciar.addEventListener('click',reiniciaJuego)
 }
 
 function seleccionarMascotaJugador() {
@@ -104,21 +106,43 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate(){
+ let spandVidasJugador = document.getElementById("vidas-jugador")
+ let spandVidasEnemigo = document.getElementById("vidas-enemigo")
+ 
+ 
     if( ataqueEnemigo == ataqueJugador){
         crearMensaje("EMPATE🤝")
     } else if ( ataqueJugador== 'FUEGO' && ataqueEnemigo == 'TIERRA' ){
         crearMensaje("GANASTE 👍")
+        vidasEnemigo--
+        spandVidasEnemigo.innerHTML= vidasEnemigo
         
     }else if( ataqueJugador== 'AGUA' && ataqueEnemigo == 'FUEGO'){
         crearMensaje("GANASTE 👍")
+        vidasEnemigo--
+        spandVidasEnemigo.innerHTML= vidasEnemigo
         
     }else if( ataqueJugador==  'TIERRA ' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("GANASTE 👍")
+        vidasEnemigo--
+        spandVidasEnemigo.innerHTML= vidasEnemigo
         
     }else{
         crearMensaje("PERDISTE 👎")
+        vidasJugador--
+        spandVidasJugador.innerHTML= vidasJugador
         
     }   
+    revisarVidas()
+
+}
+
+function revisarVidas(){
+   if (vidasEnemigo == 0 ) {
+    crearMensajeFinal("Felicitaciones , Ganaste 😁")
+   } else if( vidasJugador == 0) {
+     crearMensajeFinal("Lo Siento , Perdiste 🥲")
+   } 
 
 }
 
@@ -133,8 +157,28 @@ function crearMensaje(resultado) {
 
 }
 
+function crearMensajeFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById('mensajes')
 
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = resultadoFinal
 
+    sectionMensajes.appendChild(parrafo)
+
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
+
+}
+
+function reiniciaJuego(){
+    location.reload()
+}
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
