@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
+body{
+    font-family: "Roboto", sans-serif;;
+
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo {
+    color: black;
+  
+}
+
+.subtitulo{
+
+}
+
+
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-Mokepon {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.botones-de-mokepon{
+    width: 90px;
+    height: 50px;
+    background-color: greenyellow;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 9px;
+    border: 1px solid green;
+}
