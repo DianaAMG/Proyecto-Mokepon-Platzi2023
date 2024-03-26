@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
 
 body{
-    font-family: "Fredoka", sans-serif;
+    font-family: "Poppins", sans-serif;
     background-image: url('https://img.freepik.com/free-vector/night-prairie-game-landscape-unending-game-background-with-rivers-islands-gui-nature-interface-landscape-travel-game-ui-vector-illustration_1284-47782.jpg?t=st=1711384449~exp=1711388049~hmac=b6020d9050c3c75828f0893a22908a805c254a6c212b0d0ed1f9fd137ff617ca&w=900');
     color: black;
     text-align: center;
@@ -18,40 +18,66 @@ body{
 
 
 .titulo {
-    color: white;
-    font-size: 48px;
-    margin: 10px;
+    font-family: "Fredoka", sans-serif;
+    color:  #557000;
+    font-size: 60px;
+    margin: 0px;
+    text-shadow:  2px 2px 2px black;
 }
 
+.inicio-de-juego{
+    color: #774410;
+    display: flex;
+    width: 500px;
+    height:50px;
+    margin: 10px auto;
+    background: whitesmoke;
+    opacity: 75%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
 
 .subtitulo{
+    font-family: "Fredoka", sans-serif;
     color: white;
     font-size: 34px;
     margin: 20px;
-
+    text-shadow:  3px 3px 3px black;
 }
 
+
 .tarjetas{
+    width: 630px;
     display: flex;
-    gap: 45px;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     justify-content: center;
     align-items: stretch;
+  
 }
 
 .tarjeta-de-Mokepon {
     width: 180px;
     height: 118px;
-    background-color: BED754;
+    background-color: #84c116;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
     display: flex;
     color: white;
-    
+    box-shadow: 1px 1px 10px #557000 ;
+    transition: all 400ms ease;
 }
+
+.tarjeta-de-Mokepon:hover {
+    box-shadow: 5px 5px 15px #557000 ;
+    transform: translateY(-3%);
+}
+
 
 .tarjeta-de-Mokepon img{
     width: 100px;
@@ -66,3 +92,25 @@ body{
     margin: 9px;
     border: 1px solid green;
 }
+
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid greenyellow;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    box-shadow: 0px 0px 60px greenyellow;
+}
+
+#boton-mascota:hover {
+    transform: scale(0.95)
+}
+
+input {
+    display: none;
+}
+
+
