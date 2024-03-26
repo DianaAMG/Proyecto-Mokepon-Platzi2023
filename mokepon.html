@@ -12,46 +12,47 @@
             <h1 class="titulo">Mokepon </h1>
             
             <p class="inicio-de-juego">En este juego de acción y estrategia,adentrarás en un universo donde los poderes extraordinarios son la clave para la victoria. </p> 
-
+           
             <h2 class="subtitulo">Elige tu mascota:</h2>
 
             <div class=" tarjetas">
-                
+
+               <input type="radio" name="mascota" id="Hipodoge"> 
             <label class="tarjeta-de-Mokepon"   for="Hipodoge">
                 <p> Hipodoge</p>
                 <img src="./imagenes/HIPODOGE.png" alt="Hipodoge">
             </label>
-            <input type="radio" name="mascota" id="Hipodoge">
-
+            
+            <input type="radio" name="mascota" id="Capipepo">
             <label class="tarjeta-de-Mokepon" for="Capipepo">
                 <p> Capipepo</p>
                 <img src="./imagenes/CAIPEPO.png" alt="Capipepo">
             </label>
-            <input type="radio" name="mascota" id="Capipepo">
-
+            
+            <input type="radio" name="mascota" id="Ratigueya">
             <label class="tarjeta-de-Mokepon" for="Ratigueya">
                 <p> Ratigueya</p>
                 <img src="./imagenes/RATIGUEYA.png" alt="Ratigueya">
             </label>
-            <input type="radio" name="mascota" id="Ratigueya">
-
+            
+            <input type="radio" name="mascota" id="Langostelvis">
             <label class="tarjeta-de-Mokepon" for="Langostelvis">
                 <p> Langostelvis</p>
                 <img src="./imagenes/LANGOSTELVIS.png" alt="Langostelvis">
             </label>
-            <input type="radio" name="mascota" id="Langostelvis">
-
+           
+            <input type="radio" name="mascota" id="Tucapalma">
             <label class="tarjeta-de-Mokepon" for="Tucapalma">
                 <p>Tucapalma</p>
                 <img src="./imagenes/TUCAPALMA.png" alt="Tucapalma">
             </label>
-            <input type="radio" name="mascota" id="Tucapalma">
-
+            
+            <input type="radio" name="mascota" id="Pydos"> 
             <label class="tarjeta-de-Mokepon" for="Pydos">
                 <p>Pydos</p>
                 <img src="./imagenes/PYDOS.png" alt="Pydos">
             </label>
-            <input type="radio" name="mascota" id="Pydos"> 
+            
 
             <button id="boton-mascota">Seleccionar</button>
         </section>
@@ -61,24 +62,43 @@
             <h1 class="titulo">Mokepon</h1>
             <h2 class="subtitulo">Elige tu ataque:</h2>
 
-            <div>
+            <div class="tarjetas ataquetes">
                 <button class="boton-de-ataque" id="boton-fuego"> Fuego 🔥 </button>
                 <button class="boton-de-ataque" id="boton-agua">Agua 💧</button>
                 <button  class="boton-de-ataque" id="boton-tierra"> Tierra 🌿</button>
             </div>
 
-            <div>
-                <section  id="mensajes">
-                </section>
         
-                <section class="botones-de-mokepon" id="reiniciar">
+                <div  id="mensajes">
+                    <p id="resultado"> Mucha Suerte </p>
+                </div>
+
+                <section  id="reiniciar">
                     <button id="boton-reiniciar">Reiniciar</button>
                 </section>
-            </div>
 
-            <div>
-                <p>Tu mascota <span id="mascota-jugador"></span> <span id="vidas-jugador">3</span> vidas</p>
-                <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>    
+
+            <div class="combate">
+       
+                <div class="combate-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"> </div>
+                </div>
+
+                <div >
+                    <p id="Vs">Vs</p>
+                    <div id="Vs"> </div>
+                </div>
+                    
+                <div class="combate-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"> </div>
+                </div>
+
+                
+                  
             </div>
 
            
