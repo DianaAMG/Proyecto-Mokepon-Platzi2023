@@ -205,7 +205,7 @@ input:checked + label {
 #vidas-jugador , #vidas-enemigo {
     font-size: 32px;
     color: green;
-    text-shadow: 2px 1px 1px black;
+    text-shadow: 2px 2px 1px black;
     margin-top: 10px;
 }
 
