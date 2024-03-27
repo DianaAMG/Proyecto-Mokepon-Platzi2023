@@ -32,6 +32,17 @@ let ataqueEnemigo
 let vidasJugador =3
 let vidasEnemigo = 3
 
+class Mokepon {
+    constructor (nombre, foto, vida){
+        this.nombre = nombre
+        this.foto = foto
+        this.vida =vida
+    }
+}
+
+let Hipodoge = new Mokepon('Hipodoge', './imagenes/HIPODOGE.png', 5)
+
+let Capipepo = new Mokepon('Capipepo', './imagenes/CAIPEPO.png', 5)
 
 function iniciarJuego() {
     sectionReiniciar.style.display ="none"
@@ -152,9 +163,9 @@ function combate(){
 
 function revisarVidas(){
    if (vidasEnemigo == 0 ) {
-    crearMensajeFinal("Felicitaciones , Ganaste")
+    crearMensajeFinal("Felicitaciones Ganaste 😁")
    } else if( vidasJugador == 0) {
-     crearMensajeFinal("Lo Siento , Perdiste ")
+     crearMensajeFinal("Lo Siento Perdiste 🥲")
    } 
 
 }

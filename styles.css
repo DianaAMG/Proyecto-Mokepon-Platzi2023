@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+}
+
 body{
     font-family: "Poppins", sans-serif;
     background-image: url('https://img.freepik.com/free-vector/night-prairie-game-landscape-unending-game-background-with-rivers-islands-gui-nature-interface-landscape-travel-game-ui-vector-illustration_1284-47782.jpg?t=st=1711384449~exp=1711388049~hmac=b6020d9050c3c75828f0893a22908a805c254a6c212b0d0ed1f9fd137ff617ca&w=900');
     color: black;
     text-align: center;
-    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vw;
 }
 
 
@@ -147,19 +153,19 @@ input:checked + label {
 
 #mensajes {
     width: 190px;
-    background: #34d0de ;
-    padding: 20px;
-    margin-top: 20px;
+    background: transparent ;
+    padding: 10px;
+    margin-top: 10px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    opacity: 78%;
+    align-items: center;
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 35px;
     color: white;
     text-shadow:  1px 1px 1px black;
-    border: 1px solid #12747d;
+   
 }
 
 #boton-reiniciar {
@@ -171,7 +177,7 @@ input:checked + label {
     transition: all 100ms ease;
     border-radius: 20px;
     width: 110px;
-    height: 40px;
+    height: 35px;
     font-size: 15px;
     margin-top: 10px;
     text-shadow:  1px 1px 1px black;
@@ -189,16 +195,61 @@ input:checked + label {
  
 }
 
+#vidas {
+    font-size: 15px;
+    color: green;
+    text-shadow: 0px 1px 0px black;
+    margin-bottom: 10px;
+}
+
 #vidas-jugador , #vidas-enemigo {
     font-size: 32px;
+    color: green;
+    text-shadow: 2px 1px 1px black;
+    margin-top: 10px;
 }
 
 .combate-jugador, .combate-enemigo{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
+    background-color: greenyellow;
+    opacity: 70%;
+    width: 110px;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid   green;
 
 }
+
+#ataques-del-jugador , #ataques-del-enemigo {
+    margin: 10px;
+
+}
+
+#caja-Vs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 5px;
+    color: greenyellow ;
+    text-shadow: 1px 1px 1px black;
+    width: 110px;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+#mascota-jugador , #mascota-enemigo {
+    font-size: 100% ;
+    color: white ;
+    text-shadow: 1px 1px 1px black;
+    font-family: "Fredoka", sans-serif;
+    margin: 0  ;
+    
+}
+
 
 @media (max-width:360px){
     .tarjetas , tarjetas ataquetes , .inicio-de-juego{
